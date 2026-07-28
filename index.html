@@ -313,7 +313,7 @@ body.landing #landing{display:flex}
 
 /* on-air indicator */
 .onair-row{display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;background:var(--card);padding:1.6rem 1.8rem}
-.onair{display:inline-flex;align-items:center;gap:.7rem;border:1px solid #3a2f2a;border-radius:3px;padding:.55rem 1rem;background:#161114;color:#6d635e;font-weight:800;font-size:.82rem;letter-spacing:.16em;transition:color .3s,border-color .3s,background .3s,box-shadow .3s}
+.onair{display:inline-flex;align-items:center;gap:.7rem;border:1px solid #3a2f2a;border-radius:6px;padding:.55rem 1rem;background:#161114;color:#6d635e;font-weight:800;font-size:.82rem;letter-spacing:.16em;transition:color .3s,border-color .3s,background .3s,box-shadow .3s}
 .onair .bulb{width:9px;height:9px;border-radius:50%;background:#4a3f3a;transition:background .3s,box-shadow .3s}
 .onair.lit{color:#ffd9c9;border-color:var(--orange);background:#2a1207;box-shadow:0 0 22px rgba(248,119,43,.28),inset 0 0 14px rgba(248,119,43,.12)}
 .onair.lit .bulb{background:#ff5a2b;box-shadow:0 0 9px #ff5a2b,0 0 18px rgba(255,90,43,.7);animation:bulb 2s ease-in-out infinite}
@@ -321,17 +321,41 @@ body.landing #landing{display:flex}
 @media(prefers-reduced-motion:reduce){.onair.lit .bulb{animation:none}}
 .onair-txt{font-size:.86rem;color:var(--mut);line-height:1.7;margin-top:.6rem;max-width:520px}
 
+
+/* ── rounded corners pass ── */
+/* hairline-gap grids become real gaps so children can round cleanly */
+.chars,.range,.bpanels,.forms,.ab{background:none;gap:1rem}
+.notes-grid{background:none;gap:.6rem}
+.concept2{background:none;gap:1rem}
+
+/* cards */
+.cc,.ri,.bp,.form,.ab>div,.pq,.reelbox,.vo-hero,.rate-note,.perks,.onair-row,.forms-credit{border-radius:12px}
+.vc{border-radius:12px;overflow:hidden}
+.nt{border-radius:8px}
+.ann{border-radius:10px}
+.plat{border-radius:10px;overflow:hidden}
+.swi{border-radius:6px}
+
+/* media */
+.yt,.cc-media,.rimg,.sheet-img{border-radius:10px}
+.yt{overflow:hidden}
+.form img{border-radius:8px}
+
+/* pills */
+.bg1,.bg2,.c-ty,.soc,.ann-b,.hd-live{border-radius:999px}
+.plat-h{border-radius:10px 10px 0 0}
+
 /* ── de-slop overrides ── */
 :root{--mut:#8b857c;--cream:#d6d1c6}
 .sl{font-family:'Inter',sans-serif;font-weight:500;font-size:.74rem;letter-spacing:0;text-transform:none;color:var(--orange);font-style:italic}
 .tab,.btn-a,.btn-b,.hd-cta,.c-btn,.c-ty{text-transform:none;letter-spacing:0}
-.btn-a,.btn-b,.hd-cta,.c-btn{font-size:.88rem;font-weight:600}
+.btn-a,.btn-b,.hd-cta,.c-btn{font-size:.88rem;font-weight:600;border-radius:6px}
 .tab{font-size:.8rem;font-weight:500}
 .ann{border:none;background:rgba(212,168,67,.07)}
 .reelbox,.pq{border:none}
 .vo-hero{border:none;background:var(--card)}
-.vc{border:none}
-.vc:hover{border:none;transform:translateY(-2px);background:#1a1720}
+.vc{border:1px solid var(--border)}
+.vc:hover{border-color:rgba(248,119,43,.35);transform:translateY(-2px);background:#1a1720}
 .reach{background:none;gap:2.2rem}
 .rch{background:none;border:none;padding:1.1rem 0 0;border-top:2px solid var(--ink)}
 .rch:hover{background:none}
