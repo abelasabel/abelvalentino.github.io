@@ -209,8 +209,8 @@ main{padding-top:96px}
 .c-mail a{color:var(--cream);text-decoration:none}
 .c-mail a:hover{color:var(--gold)}
 .socs{display:flex;justify-content:center;gap:.55rem;flex-wrap:wrap}
-.soc{display:flex;align-items:center;gap:.5rem;padding:.6rem .95rem;background:var(--card);border:1px solid var(--border);text-decoration:none;color:var(--cream);font-size:.76rem;transition:border-color .15s}
-.soc:hover{border-color:rgba(248,119,43,.4)}
+.soc{display:inline-flex;align-items:center;justify-content:center;min-width:52px;height:46px;padding:0 .9rem;background:var(--card);border:1px solid var(--border);color:var(--mut);text-decoration:none;transition:color .18s,border-color .18s,transform .18s}
+.soc:hover{color:var(--orange);border-color:rgba(248,119,43,.45);transform:translateY(-2px);border-color:rgba(248,119,43,.4)}
 .soc .mono{font-size:.54rem;letter-spacing:1px;color:var(--orange);text-transform:uppercase}
 footer{background:var(--black);padding:1.8rem 2rem;text-align:center;border-top:1px solid var(--border)}
 .f-c{font-size:.64rem;color:#2a2730;line-height:1.7}
@@ -321,6 +321,15 @@ body.landing #landing{display:flex}
 .onair-txt{font-size:.86rem;color:var(--mut);line-height:1.7;margin-top:.6rem;max-width:520px}
 
 
+.soc-handle{font-size:.78rem;color:var(--mut);margin-top:1rem;letter-spacing:.04em}
+
+
+.ann-t a{color:var(--gold);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;font-weight:700}
+.ann-t a:hover{color:var(--orange)}
+.cc-desc a{text-decoration:underline!important;text-underline-offset:3px}
+
+
+
 /* ── rounded corners pass ── */
 /* hairline-gap grids become real gaps so children can round cleanly */
 .chars,.range,.bpanels,.forms,.ab{background:none;gap:1rem}
@@ -370,6 +379,7 @@ body.landing #landing{display:flex}
 .path p{margin-bottom:.7rem;max-width:620px}
 @media(max-width:900px){.reach{grid-template-columns:1fr 1fr;gap:1.4rem}.path{grid-template-columns:52px 1fr;gap:1rem}}
 </style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Abel Valentino", "alternateName": "Abel Valentino Rizqi Nurhapy", "url": "https://abelvalentino.com/", "jobTitle": ["Voice Actor", "VTuber", "Content Creator"], "description": "Indonesian and English voice actor, known as Budi Raynar in the Troublemaker series. Indie VTuber and content creator.", "knowsLanguage": ["id", "en"], "sameAs": ["https://www.imdb.com/name/nm16216779/", "https://www.youtube.com/@abelasabel", "https://instagram.com/abelasabel", "https://www.tiktok.com/@abelasabel", "https://x.com/abelasabel"], "performerIn": [{"@type": "VideoGame", "name": "Troublemaker", "publisher": {"@type": "Organization", "name": "Gamecom Team"}}, {"@type": "VideoGame", "name": "Troublemaker 2: Beyond Dream", "publisher": {"@type": "Organization", "name": "Gamecom Team"}}, {"@type": "VideoGame", "name": "Lokapala: Saga of the Six Realms", "publisher": {"@type": "Organization", "name": "Anantarupa Studios"}}, {"@type": "VideoGame", "name": "Below The Matrix"}]}</script>
 </head>
 <body class="landing">
 
@@ -377,7 +387,7 @@ body.landing #landing{display:flex}
   <img class="lx-fl" data-i="flowers" alt="" aria-hidden="true">
   <div class="lx-portrait"><img data-i="bust" alt="Abel Valentino VTuber model" fetchpriority="high"></div>
   <div>
-    <h1 class="lx-name">ABEL <em>VALENTINO</em></h1>
+    <div class="lx-name">ABEL <em>VALENTINO</em></div>
     <p class="lx-tag">Voice Actor. Local Joyboy. Father of Paws and Whiskers.</p>
   </div>
   <nav class="lx-nav">
@@ -399,7 +409,7 @@ body.landing #landing{display:flex}
   <div class="hd-top">
     <a class="hd-name" href="#" onclick="toLanding();return false" title="Back to start">ABEL <em>VALENTINO</em></a>
     <a id="hd-live" class="hd-live" hidden href="https://www.youtube.com/@abelasabel/live" target="_blank" rel="noopener">LIVE</a>
-    <a class="hd-cta" href="mailto:abelasabel21@gmail.com">Email me</a>
+    <a class="hd-cta" href="mailto:abelasabel21@gmail.com?subject=Enquiry%20via%20abelvalentino.com">Email me</a>
   </div>
   <nav class="tabs" role="tablist">
     <button class="tab on" data-t="overview" onclick="go('overview')">Overview</button>
@@ -416,7 +426,7 @@ body.landing #landing{display:flex}
 
   <div class="hero hero-outer"><img class="deco-fl-hero" data-i="flowers" alt="" aria-hidden="true" loading="lazy">
     <div>
-      <div class="hero-kicker">Jakarta ↔ Singapore, records in Indonesian and English</div>
+      <div class="hero-kicker">Jakarta ↔︎ Singapore, records in Indonesian and English</div>
       <h1 class="hero-name">ABEL<br><em>VALENTINO</em></h1>
       <p class="hero-sub">I'm Abel. I voice <strong>Budi Raynar</strong> in Gamecom Team's <strong>Troublemaker</strong> series, and I'm coming back for the third one. When the mic is off I stream as an indie VTuber and close B2B deals. Long story.</p>
       <div class="roles">
@@ -441,7 +451,7 @@ body.landing #landing{display:flex}
   <div class="ann">
     <div class="ann-i">
       <span class="ann-b">CONFIRMED</span>
-      <p class="ann-t"><strong>Troublemaker 3</strong> is confirmed. I'm coming back as Budi.<a href="https://www.instagram.com/p/DXiWVF-iQZV/" target="_blank" rel="noopener">announcement ↗</a></p>
+      <p class="ann-t"><a href="https://www.instagram.com/p/DXiWVF-iQZV/" target="_blank" rel="noopener"><strong>Troublemaker 3</strong></a> is confirmed. I'm coming back as Budi. <a href="https://www.instagram.com/p/DXiWVF-iQZV/" target="_blank" rel="noopener">Read the announcement</a>.</p>
     </div>
   </div>
 
@@ -557,7 +567,7 @@ body.landing #landing{display:flex}
         <span class="cc-game">Lokapala: Saga of the Six Realms, Anantarupa Studios</span>
         <div class="cc-name">Kosho</div>
         <div class="cc-role">Ksatriya Hero, Voice Role</div>
-        <p class="cc-desc">The Unconquered Wisdom, a wandering monk Ksatriya inspired by Ajnagarbha of the Syailendra dynasty. Indonesia's first esports MOBA. Trailer above. <a href="https://www.instagram.com/p/DB8j9t7y65v/" target="_blank" rel="noopener" style="color:var(--orange);text-decoration:none">Character reveal post ↗</a></p>
+        <p class="cc-desc">The Unconquered Wisdom, a wandering monk Ksatriya inspired by Ajnagarbha of the Syailendra dynasty. Indonesia's first esports MOBA. Trailer above. <a href="https://www.instagram.com/p/DB8j9t7y65v/" target="_blank" rel="noopener" style="color:var(--orange);text-decoration:none">See the character reveal post</a></p>
       </div>
       <div class="cc">
         <div class="yt" data-id="pNLjrBs1XxQ" style="margin-bottom:1.1rem;border:1px solid var(--border)"></div>
@@ -799,23 +809,22 @@ body.landing #landing{display:flex}
     <div class="c-types">
       <span class="c-ty">Voice Acting</span><span class="c-ty">Brand Deals</span><span class="c-ty">VTuber Collabs</span><span class="c-ty">Game Promo</span><span class="c-ty">Narration</span><span class="c-ty">Influencer Campaigns</span>
     </div>
-    <a href="mailto:abelasabel21@gmail.com" class="c-btn">Say hi</a>
+    <a href="mailto:abelasabel21@gmail.com?subject=Enquiry%20via%20abelvalentino.com" class="c-btn">Say hi</a>
     <div class="c-mail"><a href="mailto:abelasabel21@gmail.com">abelasabel21@gmail.com</a></div>
     <div class="socs">
-      <a class="soc" href="https://x.com/abelasabel" target="_blank" rel="noopener"><span class="mono">X</span>@abelasabel</a>
-      <a class="soc" href="https://instagram.com/abelasabel" target="_blank" rel="noopener"><span class="mono">IG</span>@abelasabel</a>
-      <a class="soc" href="https://www.youtube.com/@abelasabel" target="_blank" rel="noopener"><span class="mono">YT</span>@abelasabel</a>
-      <a class="soc" href="https://www.tiktok.com/@abelasabel" target="_blank" rel="noopener"><span class="mono">TT</span>@abelasabel</a>
-      <a class="soc" href="https://www.imdb.com/name/nm16216779/" target="_blank" rel="noopener"><span class="mono">IMDb</span>nm16216779</a>
-      <a class="soc" href="https://www.twitch.tv/abelvalentino" target="_blank" rel="noopener"><span class="mono">TW</span>abelvalentino</a>
-      <a class="soc" href="https://discord.gg/GHJRwpHWX8" target="_blank" rel="noopener"><span class="mono">DC</span>Community server</a>
-      <a class="soc" href="https://linktr.ee/abelasabel" target="_blank" rel="noopener"><span class="mono">All</span>linktr.ee</a>
+      <a class="soc" href="https://www.youtube.com/@abelasabel" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube, @abelasabel"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg></a>
+      <a class="soc" href="https://instagram.com/abelasabel" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram, @abelasabel"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><rect x="2.2" y="2.2" width="19.6" height="19.6" rx="5.6" fill="none" stroke="currentColor" stroke-width="1.9"/><circle cx="12" cy="12" r="4.6" fill="none" stroke="currentColor" stroke-width="1.9"/><circle cx="17.6" cy="6.4" r="1.3" fill="currentColor"/></svg></a>
+      <a class="soc" href="https://www.tiktok.com/@abelasabel" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok, @abelasabel"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M16.9 2h-3.3v13.4a2.7 2.7 0 1 1-2.2-2.6V9.4a6 6 0 1 0 5.5 6V8.9a7.6 7.6 0 0 0 4.4 1.4V6.9a4.4 4.4 0 0 1-4.4-4.4V2z"/></svg></a>
+      <a class="soc" href="https://x.com/abelasabel" target="_blank" rel="noopener" aria-label="X" title="X, @abelasabel"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M18.9 2.3h3.4l-7.4 8.5 8.7 11.5h-6.8l-5.3-7-6.1 7H1.9l7.9-9.1-8.3-10.9h7l4.8 6.4 5.6-6.4zm-1.2 17.9h1.9L6.4 4.2H4.4l13.3 16z"/></svg></a>
+      <a class="soc" href="https://discord.gg/GHJRwpHWX8" target="_blank" rel="noopener" aria-label="Discord community server" title="Discord community server"><svg viewBox="0 0 24 24" width="23" height="23" aria-hidden="true"><path fill="currentColor" d="M19.3 5.3A16.9 16.9 0 0 0 15.1 4l-.2.4a15.7 15.7 0 0 1 3.7 1.2 12.6 12.6 0 0 0-4.3-1.4 12.5 12.5 0 0 0-4.7 0A12.6 12.6 0 0 0 5.4 5.6 15.7 15.7 0 0 1 9.1 4.4L8.9 4a16.9 16.9 0 0 0-4.2 1.3C2.2 9 1.5 12.6 1.9 16.1a17 17 0 0 0 5.1 2.6l1-1.7a11 11 0 0 1-1.7-.8l.4-.3a12.2 12.2 0 0 0 10.6 0l.4.3a11 11 0 0 1-1.7.8l1 1.7a17 17 0 0 0 5.1-2.6c.5-4.1-.6-7.6-2.8-10.8zM8.6 13.9c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.9.9 1.8 2c0 1.1-.8 2-1.8 2zm6.8 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2c0 1.1-.8 2-1.8 2z"/></svg></a>
+      <a class="soc" href="https://www.imdb.com/name/nm16216779/" target="_blank" rel="noopener" aria-label="IMDb" title="IMDb, nm16216779"><svg viewBox="0 0 48 24" width="36" height="22" aria-hidden="true"><rect x="1" y="3.5" width="46" height="17" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><text x="24" y="16.2" text-anchor="middle" font-family="Inter,sans-serif" font-size="10.5" font-weight="800" fill="currentColor">IMDb</text></svg></a>
     </div>
+    <p class="soc-handle">@abelasabel on every platform</p>
   </div>
 </div>
 
 <footer>
-  <p class="f-c">Abel Valentino, Voice Actor, Indie VTuber, Jakarta ↔ Singapore<br>
+  <p class="f-c">Abel Valentino, Voice Actor, Indie VTuber, Jakarta ↔︎ Singapore<br>
   Budi Raynar (Troublemaker 1, 2 and 3 TBA), Kosho (Lokapala), Archie (Below The Matrix)<br>
   Model art by TsukinoBeato, Rig by CullenRiel, Logo by SeHa, Emblem by Cianguin<br>Tsutsuji azalea motif, the mark of Abel Valentino<br>One hand-rolled HTML file. View source if you're curious.</p>
 </footer>
